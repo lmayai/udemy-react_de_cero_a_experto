@@ -112,5 +112,6 @@ const respApi = {
 console.log((_respApi$personajes = respApi.personajes) == null ? void 0 : _respApi$personajes)
 ```
 
-**Se debe tener en cuenta que React no depende absolutamente de Babel, Babel se usa como una herramienta para darle mayor compatibilidad a las app en los navegadores, y permitir el uso de JS moderno.**
+**Se debe tener en cuenta que React no depende absolutamente de Babel, Babel se usa como una herramienta para darle mayor compatibilidad a las app en los navegadores, y permitir el uso de JS moderno. Babel funcionará internamente en la apps de React**
+
 

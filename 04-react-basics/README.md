@@ -152,6 +152,18 @@ En lo anterior se puede observar que *mensaje* es una propiedad que es **string*
 
 Los errores que obtendríamos serían en la consola, pero no detienen la ejecución.
 
+## Default Props
+Otra manera de definir pro defecto una propiedad es así
+```js
+PrimeraApp.defaultProps = {
+  description: 'Esta descripcion es por defecto'
+}
+```
+
+
+```js```
+```js```
+```js```
 ```js```
 ```js```
 ```js```

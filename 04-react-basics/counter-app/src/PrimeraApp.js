@@ -3,15 +3,20 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types'
 
-const PrimeraApp = ({mensaje, saludo = 'Hola Mundo' }) => {
+const PrimeraApp = ({mensaje, saludo = 'Hola Mundo', description }) => {
 
   return (
     <Fragment>
       <h1> { saludo } </h1>
       {/* <pre>{JSON.stringify(variable, null, 3)}</pre> */}
       <p> { mensaje } </p>
+      <small> {description} </small>
     </Fragment>
   );
+}
+
+PrimeraApp.defaultProps = {
+  description: 'Esta descripcion es por defecto'
 }
 
 PrimeraApp.propTypes = {

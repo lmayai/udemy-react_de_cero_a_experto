@@ -43,7 +43,37 @@ const MyFuntionalComponent = () => {
 export default MyFuntionalComponent;
 ```
 
+Es importante saber que si se va a retornar varios elementos html, debe enacpsularse en un elemento Fragment, y además JS solo retorna un objeto, por tal, debe estar entre paréntesis.
+```js
+const PrimeraApp = () => {
+  return (
+    <Fragment>
+      <h1>HOLAAA mundo</h1>
+      <p>Nombre: <b>Juancho</b></p>
+    </Fragment>
+  );
+}
+```
+- En vez de *Fragment* se puede utilizar un div o cualquier etiqueta, pero Fragment no contiene información extra.
+Fragment no se vería en el árbol de HTML, solo es a modo de agrupación
 
+Otra forma de utilizar un Fragment es con etiquetas vacias
+
+```js
+const PrimeraApp = () => {
+  return (
+    <>
+      <h1>HOLAAA mundo</h1>
+      <p>Nombre: <b>Juancho</b></p>
+    </>
+  );
+}
+```
+
+
+
+```js```
+```js```
 ```js```
 ```js```
 ```js```

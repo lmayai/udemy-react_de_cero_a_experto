@@ -94,6 +94,7 @@ const PrimeraApp = () => {
 *** Consideraciones:
   - Los booleanos no los imprime
   - Los arreglos los pone juntos
+  - los undefined o null tampoco.
 
 Para imprimir objetos, se podría hacer lo siguiente:
 ```js
@@ -104,7 +105,52 @@ Para imprimir objetos, se podría hacer lo siguiente:
 </>
 ```
 
+## Propiedades enviadas a los componentes
+>> Mirar en las devtools de chrome la pestaña components.
 
+Al revisar el componente, se pueden observar las *props*. Las props son aquellos valores que se envian desde un componentes padre a un componente hijo. Esas props pueden definirse también como los valores de entrada de un componente.
+
+- Para enviar propiedades al componente.
+```js
+ReactDOM.render(<PrimeraApp saludo='Hola soy goku'/> , divRoot);
+```
+
+- Luego para poder usar las props lo recomendado es desestructurar
+```js
+const PrimeraApp = ({ saludo }) => {
+  return (<h1> {saludo} </h1>)
+}
+```
+
+**Pero, qué pasa si no hay saludo, o si es undefined!**
+
+- Es posible definir un valor por defectp
+```js
+const PrimeraApp = ({ saludo = 'Hola mundo' }) => {
+}
+```
+
+- También es posible definir que una propiedad sea obligatoria
+
+## PropTypes
+Con los PropTypes es posible definir que una propiedad sea obligatoria o que tenga un tipo en específico.
+
+Se importa así
+```js
+import PropTypes from 'prop-types'
+```
+
+Y se utlizan así
+```js
+PrimeraApp.propTypes = {
+  mensaje: PropTypes.string.isRequired,
+  saludo: PropTypes.string
+}
+```
+
+En lo anterior se puede observar que *mensaje* es una propiedad que es **string** y es obligatoria y que *saludo* debe ser un **string** pero no es obligatorio.
+
+Los errores que obtendríamos serían en la consola, pero no detienen la ejecución.
 
 ```js```
 ```js```

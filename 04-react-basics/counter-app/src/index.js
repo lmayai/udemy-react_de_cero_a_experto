@@ -6,5 +6,8 @@ import './index.css';
 
 const divRoot = document.querySelector('#root');
 
-ReactDOM.render(<PrimeraApp /> , divRoot);
+ReactDOM.render(
+  <PrimeraApp mensaje="Primerita app" saludo='Hola soy Gokú'  />,
+  divRoot
+);
 

@@ -55,5 +55,13 @@ const heroesDefault = [
   ];
 
 
+export const getHeroById = (id) => {
+    return heroesNoDefault.find( (hero) => hero.id === id );
+}
+
+export const getHerosByOwner = (owner) => {
+    return heroesDefault.filter( (hero) => hero.owner === owner);
+}
+
 
 export default heroesDefault;

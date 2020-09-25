@@ -25,3 +25,26 @@ const divRoot = document.querySelector('#root');
 
 ReactDOM.render(saludo, divRoot);
 ```
+
+## Componentes
+- Como notación los componentes se escriben con Upper Camel Case. es decir MiComponent.js
+- Los componentes pueden estar basados a funciones o a clases.
+  - Las funciones se llaman: Functional component, que antes eran las stateless components. Pero ahora con hooks ya pueden tener un estado.
+  - *En la actualidad es lo más utilziado, los functional components* 
+
+Un Functional component, luce así:
+```js
+import React from 'react';
+
+const MyFuntionalComponent = () => {
+  return <h1>My component</h1>
+}
+
+export default MyFuntionalComponent;
+```
+
+
+```js```
+```js```
+```js```
+```js```

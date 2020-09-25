@@ -70,11 +70,42 @@ const PrimeraApp = () => {
 }
 ```
 
+Si se desea usar EMMET en archivos JS, se debe incluir en settings.json
+```json
+"emmet.includeLanguages": {
+  "javascript": "javascriptreact"
+}
+```
+
+## Impresión de variables
+
+Para imprimir variable se usan **{ }**
+```js
+const PrimeraApp = () => {
+  const saludo = 'HOlaaa'
+  return (
+    <>
+      <h1> { saludo } </h1>
+    </>
+  );
+}
+```
+
+*** Consideraciones:
+  - Los booleanos no los imprime
+  - Los arreglos los pone juntos
+
+Para imprimir objetos, se podría hacer lo siguiente:
+```js
+<>
+  <p> {JSON.stringify(variable)} </p>
+  <pre>{JSON.stringify(variable, null, 3)}</pre>
+  <pre> variable </pre>
+</>
+```
 
 
-```js```
-```js```
-```js```
+
 ```js```
 ```js```
 ```js```

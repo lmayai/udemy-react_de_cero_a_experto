@@ -34,6 +34,15 @@ https://gist.github.com/Klerith/4a4abfd88a88b2d1f16efd95fea41362
 - Ternarios
 - Async - Await
 
-
+## Sección 04 Primeros pasos con React
+- Nuestra primera aplicación - Hola Mundo
+- Exposiciones sobre los componentes
+- Creación de componentes (Functional Components)
+- Propiedades - Props
+- Impresiones en el HTML
+- PropTypes
+- DefaultProps
+- Introducción general a los Hooks
+- useState
 
 

@@ -160,6 +160,8 @@ PrimeraApp.defaultProps = {
 }
 ```
 
+## Snippets para crear un functional component con propTypes
+> rafcp
 
 ```js```
 ```js```

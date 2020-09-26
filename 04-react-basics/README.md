@@ -163,7 +163,27 @@ PrimeraApp.defaultProps = {
 ## Snippets para crear un functional component con propTypes
 > rafcp
 
-```js```
+
+## Eventos de click
+https://es.reactjs.org/docs/events.html
+
+Para el evento de click se usa *onClick*
+```js
+<button onClick={ (e) => {handleAdd(e)} }>+</button>
+```
+
+Esto puede resumirse así, ya que el argumento que se recibe es enviado al llamado de una función como primer argumento
+```js
+<button onClick={ handleAdd }>+</button>
+```
+Donde handleAdd es una function que recibe el evento. Lo que se hizo al colocarlo así fue pasarlo como referencia la función, pero no se ejecuta
+
+- Que pasa si hago el llamado
+```js
+<button onClick={ handleAdd() }>+</button>
+```
+Este caso lo que haría es ejecutar directamente la función, pero no funcionaría como procesador del evento, ya que se llama al momento de la renderizacion y no al momento de dar Click. Una manera en que podría funcionar esto es que esa funcion que se ejecuta retorne otra función. Lo anterior complica todo, por tal, es más práctico pasar la funcion como referencia.
+
 ```js```
 ```js```
 ```js```

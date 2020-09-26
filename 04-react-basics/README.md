@@ -184,7 +184,34 @@ Donde handleAdd es una function que recibe el evento. Lo que se hizo al colocarl
 ```
 Este caso lo que haría es ejecutar directamente la función, pero no funcionaría como procesador del evento, ya que se llama al momento de la renderizacion y no al momento de dar Click. Una manera en que podría funcionar esto es que esa funcion que se ejecuta retorne otra función. Lo anterior complica todo, por tal, es más práctico pasar la funcion como referencia.
 
-```js```
+
+## Hook más básico
+
+Para importar el useState
+```js
+import React, { useState } from 'react';
+... 
+```
+En el momento de usar el useState se observa que en los devTools ahora aparece un State, ya que este hook permite definirle un estado a nuestro componente.
+
+```js
+const [counter, setCounter] = useState(0);
+```
+Con la desestructuración sabemos que useState retorna un arreglo que en la 1ra posicion tiene un valor y en la 2da tiene un función.
+
+Esta función es usada para poder modificar el valor del state. El counter, que es lo que tiene el state es en si una constante, por tal, no es posible modificarla dentro del código. React nos obliga a usar la función que permite cambiarlo.
+```js
+const handleAdd = (e) => {
+  setCounter(counter+1)
+}
+```
+
+**NOTA**: *React es tremendamente eficiente, ya que solo modifica dentro del DOM lo que cambia. Cada vez que modificamos el valor del counter, el unico elemento que cambia en el DOM será el relaciona al valor del counter*
+
+- el setcounter tambien puede recibir un callback, si es que no se tiene el valor previo donde *c* es el valor anterior del *counter*
+```js
+setCounter( (c) => c + 1 )
+```
 ```js```
 ```js```
 ```js```

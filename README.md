@@ -45,4 +45,19 @@ https://gist.github.com/Klerith/4a4abfd88a88b2d1f16efd95fea41362
 - Introducción general a los Hooks
 - useState
 
+## Sección 05 Pruebas unitarias y de integración - Intro
+- Introducción a las pruebas
+- AAA
+- Arrange - Arreglar
+- Act - Actuar
+- Assert - Afirmar
+- Primeras pruebas
+- Jest
+- Expect
+- toBe
+- Enzyme
+- Comandos útiles en la terminal para pruebas
+- Revisar elementos renderizados en el componente
+- Simular eventos
+
 

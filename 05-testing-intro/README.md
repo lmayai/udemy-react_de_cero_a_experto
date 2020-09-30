@@ -120,6 +120,7 @@ test('getHeroeByIdAsync should return an hero', (done) => {
 ```
 
 **- Para async await**
+
 Basta con poner en la prueba async y await en la respuesta
 
 ```js
@@ -129,6 +130,40 @@ test('should getImagen return an url', async () => {
   })
 ```
 
+### Testing con React
+Para probar un componente es posible utilizar 2 métodos:
+- @testing-library/react
+- Enzyme
+
+Para utlizar Testing Library de react es necesario añadir un archivo en la carpeta *src* del app llamado setupTests.js. Que tendría lo siguiente:
+```js
+import '@testing-library/jest-dom/extend-expect';
+```
+
+Este permite ampliar las funciones del expect común de jest para analizar los componentes de react.
+
+En la siguiente prueba lo que se hace es que al enviarle una propiedad al componente, este verifique que si la renderiza. La prueba sería así:
+
+```js
+test('should show the message "Primerita app"', () => {
+  const saludo = 'Primerita app';
+  const wrapper = render( <PrimeraApp mensaje={saludo} />);
+  expect(wrapper.getByText(saludo)).toBeInTheDocument();
+})
+```
+
+Debe resaltarse que la pruebe requiere las siguiente exportaciones: React, el método render() de testing library y el componente a renderizar como tal.
+```js
+import React from 'react'
+import { render } from '@testing-library/react';
+import PrimeraApp from '../PrimeraApp';
+```
+
+***Una alternativa muy utilizada hoy en día, y la cual es más sencilla es utilizar Enzyme, en vez de utilizar testing-library. Donde Enzyme ya viene instalado. Testing library a parte no muestra muy claro cuales son los errores.***/
+
+
+## Con Enzyme
+Enzyme permite expandir las funcionalidades de Jest.
 
 ```js```
 ```js```

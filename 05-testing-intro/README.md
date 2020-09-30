@@ -54,6 +54,8 @@ Dentro del archivo se dentran funcionan *test*. Al instalar react con create-rea
 
 https://jestjs.io/
 
+### ToBe
+
 - Una prueba luce así:
 ```js
 test( 'Should be equal strings ', () => {
@@ -75,6 +77,18 @@ Para obtener ayudas es bueno importar en los archivos lo siguiente
 import '@testing-library/jest-dom';
 ```
 
-```js```
+### toEqual
+To Equal sirve para comparar objetos!! a diferencia de con toBe. toEqual analiza propiedad a propiedad.
+
+```js
+test('getUser should return an object', () => {
+    const userTest = {
+      uid: 'ABC123',
+      username: 'El_Papi1502'
+    };
+    const user = getUser();
+    expect(user).toEqual(userTest);
+  })
+```
 ```js```
 ```js```

@@ -118,4 +118,18 @@ test('getHeroeByIdAsync should return an hero', (done) => {
   done()
 })
 ```
+
+**- Para async await**
+Basta con poner en la prueba async y await en la respuesta
+
+```js
+test('should getImagen return an url', async () => {
+    const url = await getImagen();
+    expect(typeof url).toBe('string')
+  })
+```
+
+
+```js```
+```js```
 ```js```

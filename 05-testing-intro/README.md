@@ -69,3 +69,12 @@ test( 'Should be equal strings ', () => {
 
 });
 ```
+
+Para obtener ayudas es bueno importar en los archivos lo siguiente
+```js
+import '@testing-library/jest-dom';
+```
+
+```js```
+```js```
+```js```

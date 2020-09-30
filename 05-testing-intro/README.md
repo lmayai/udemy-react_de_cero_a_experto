@@ -90,5 +90,32 @@ test('getUser should return an object', () => {
     expect(user).toEqual(userTest);
   })
 ```
-```js```
+
+### Testing con procedimientos asíncronos
+
+Si se ejucata una prueba asincrona, a pesar de tener un assert que falle, la tarea pasa.
+```js
+test('getHeroeByIdAsync should return an hero', () => {
+    getHeroeByIdAsync(1)
+      .then( (hero) => {
+        expect(true).toBe(false)
+      })
+  })
+```
+Esto ocurre por que los test son normalemnet sincronos, no asincronos. Como tal el test nunca termina ejecutando el assert.
+
+Para lograr que si se ejecute se debe pasar un argumento al callback de la prueba, llamado **done**
+```js
+test('getHeroeByIdAsync should return an hero', (done) => {
+  //promise here
+})
+```
+Con solo agregar eso ya debe esperar a que la prueba termine.
+
+Luego, cuando se llame el *done()* se finaliza la prueba
+```js
+test('getHeroeByIdAsync should return an hero', (done) => {
+  done()
+})
+```
 ```js```

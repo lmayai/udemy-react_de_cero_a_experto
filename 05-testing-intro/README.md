@@ -163,8 +163,88 @@ import PrimeraApp from '../PrimeraApp';
 
 
 ## Con Enzyme
-Enzyme permite expandir las funcionalidades de Jest.
+https://enzymejs.github.io/enzyme/
 
+https://www.npmjs.com/package/enzyme-to-json
+
+Enzyme permite expandir las funcionalidades de Jest. Adem´s de ser más simple. Fue desarrolladoa por airbnb.
+Permite conectarse con diferentes motores de pruebas cono *Karma*, *Mocha*. Al utilizar el create-react-app se utilizará *Jest*
+
+- 1. Instalación en el proyecto para reaact 16
+> npm i --save-dev enzyme enzyme-adapter-react-16
+
+
+- 2. Agregar en el setupTests.js
+```js
+import Enzyme from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
+
+Enzyme.configure({ adapter: new Adapter() });
+```
+
+- 3. Prueba con snapshots e importaciones
+```js
+import React from 'react'
+import PrimeraApp from '../PrimeraApp';
+import { shallow } from 'enzyme';
+import '@testing-library/jest-dom';
+
+test('Should show <PrimerApp /> con Enzyme', () => {
+  const saludo = 'Hola mundo';
+  const wrapper = shallow(<PrimeraApp mensaje={saludo}/>);
+  expect(wrapper).toMatchSnapshot();
+})
+```
+Cuando se ejecuta esta prueba, se crea dentro de la carpeta test una carpeta *_snapshots_*.
+
+En esta carpeta aparece algo como lo siguiente
+```js
+exports[`Pruebas en <PrimeraApp /> Should show <PrimerApp /> con Enzyme 1`] = `ShallowWrapper {}`;
+```
+AL final aparece algo como *ShallowWrapper {}* lo cual no es conveniente y no servirá para hacer pruebas. Para que funcione, se necesita que en esa parte se obtenga una fotografía de lo que se está renderizando en el momento.
+
+- 4. Para continuar es necesario una libreria llamada *enzyme-to.json*. Que siempre se instala como dependencia de desarrollo.
+> npm install --save-dev enzyme-to-json
+
+- 5. Luego haría falta hacer una configuración para utilizarlo. Donde se debe agregar lo siguiente al *setupTests.js*
+```js
+import { createSerializer } from 'enzyme-to-json';
+expect.addSnapshotSerializer(createSerializer({mode: 'deep'}));
+```
+
+Al ejecutar las prubeas que se tenían anteriormente, estas fallan. Mostrando que un Snapshot falló, ya que era un snapshot guardado previamente.
+
+Para poder solucionar, luego de que se ejecute la prueba hay que actualizar el snapshot. Esto se hace presionando **u**
+
+- 6. Ahora al visualizar el snapshot dentro de la carpeta se obtiene lo siguiente.
+```js
+exports[`Pruebas en <PrimeraApp /> Should show <PrimerApp /> con Enzyme 1`] = `
+<Fragment>
+  <h1>
+     
+    Hola Mundo
+     
+  </h1>
+  <p>
+     
+    Hola mundo
+     
+  </p>
+  <small>
+     
+    Esta descripcion es por defecto
+     
+  </small>
+</Fragment>
+`;
+```
+Lo cual significa que se obtuvo correctamente la fotografía del componente renderizado.
+
+*NOTA: Si luego de correr una prueba que pasó, se modifica un componente, las pruebas fallarán ya que el snapshot (fotografía) es diferente en ese momento. Para lograr que vuelvan a pasar es necesario actualizar el snapshot.*
+
+
+```js```
+```js```
 ```js```
 ```js```
 ```js```

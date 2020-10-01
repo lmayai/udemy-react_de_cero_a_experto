@@ -251,7 +251,22 @@ expect(textDescription).toBe(description);
 ```
 Ese *find* funciona como el querySelector de js
 
-```js```
-```js```
-```js```
-```js```
+- Para buttons: Los botones con el wrapper pueden ser simulador. Si una simulación de un botón es un click, ese click cambiara el estado del componentes, por tal se tendría un nuevo valor a evaluar
+```js
+test('Should increment value when click plus button', () => {
+  wrapper.find('button').at(0).simulate('click'); 
+  const newValue = wrapper.find('h2').text().trim()
+  expect(newValue).toBe('11');
+});
+```
+
+- uso de beforeEach: Todas las pruebas tienen un ciclo de vida. Hay una función que se llama beforeEach, la cual se ejecuta antes de cada test. Una buena practica es colocar la inicializacion del wrapper allí.
+```js
+let wrapper;
+
+beforeEach(() => {
+  wrapper = shallow(<CounterApp/>);
+})
+```
+
+*Las prubeas con Hooks no se harán a componentes de React como useState, sino que se hacen a valores renderizados luego de hacer interacciones.*

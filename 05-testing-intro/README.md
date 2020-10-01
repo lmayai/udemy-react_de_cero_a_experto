@@ -242,8 +242,15 @@ Lo cual significa que se obtuvo correctamente la fotografía del componente rend
 
 *NOTA: Si luego de correr una prueba que pasó, se modifica un componente, las pruebas fallarán ya que el snapshot (fotografía) es diferente en ese momento. Para lograr que vuelvan a pasar es necesario actualizar el snapshot.*
 
+### Prubeas con Wrapper
 
-```js```
+- En el wrapper es posible hacer busquedas de los elementos renderizados.
+```js
+const textDescription = wrapper.find('small').text();
+expect(textDescription).toBe(description);
+```
+Ese *find* funciona como el querySelector de js
+
 ```js```
 ```js```
 ```js```

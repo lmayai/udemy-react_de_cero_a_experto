@@ -22,6 +22,23 @@ describe('Pruebas en <PrimeraApp />', () => {
     const wrapper = shallow(<PrimeraApp mensaje={saludo}/>);
     expect(wrapper).toMatchSnapshot();
   })
+
+  test('should show the description, sent by props', () => {
+    const saludo = 'Hola mundo';
+    const description = 'Esta es la descripcion';
+    const wrapper = shallow(
+      <PrimeraApp 
+        mensaje={saludo}
+        description={description}
+      />
+    );
+
+    // Esto es como un query selector
+    //const textDescription = wrapper.find('small').html;
+    const textDescription = wrapper.find('small').text();
+    expect(textDescription).toBe(description);
+  })
+  
   
 
 

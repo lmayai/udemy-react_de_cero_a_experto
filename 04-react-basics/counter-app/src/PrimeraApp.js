@@ -7,10 +7,10 @@ const PrimeraApp = ({mensaje, saludo = 'Hola Mundo', description }) => {
 
   return (
     <Fragment>
-      <h1> { saludo } </h1>
+      <h1>{ saludo }</h1>
       {/* <pre>{JSON.stringify(variable, null, 3)}</pre> */}
-      <p> { mensaje } </p>
-      <small> {description} </small>
+      <p>{ mensaje }</p>
+      <small>{description}</small>
     </Fragment>
   );
 }

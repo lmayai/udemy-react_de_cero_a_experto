@@ -1,12 +1,15 @@
 # curso-react_de_cero_a_experto
 
+https://github.com/lmayai/udemy-react_de_cero_a_experto
+
+https://www.udemy.com/course/react-cero-experto/
+
 ## Sección 01 Pre curso
 
 Context API, MERN, Hooks, Firestore, JWT, Testing, Autenticaciones, Despliegues, CRUD, Logs, SASS, Multiple Routers...
 
 ### Instalaciones necesarias
 https://gist.github.com/Klerith/4a4abfd88a88b2d1f16efd95fea41362
-
 - Chrome
 - React Developer Tools
 - Redux devtools
@@ -22,6 +25,8 @@ https://gist.github.com/Klerith/4a4abfd88a88b2d1f16efd95fea41362
 - Babel
 - JSX
 
+Babel link -> https://babeljs.io/
+
 ## Sección 03 Introducción a JS Moderno
 - Generar la base sobre JavaScript
 - Constantes y variables Let
@@ -34,6 +39,12 @@ https://gist.github.com/Klerith/4a4abfd88a88b2d1f16efd95fea41362
 - Ternarios
 - Async - Await
 
+Create-react-app -> https://create-react-app.dev/
+
+MDN Web Docs -> https://developer.mozilla.org/es/docs/web
+
+API Giphy -> https://developers.giphy.com/
+
 ## Sección 04 Primeros pasos con React
 - Nuestra primera aplicación - Hola Mundo
 - Exposiciones sobre los componentes
@@ -44,6 +55,8 @@ https://gist.github.com/Klerith/4a4abfd88a88b2d1f16efd95fea41362
 - DefaultProps
 - Introducción general a los Hooks
 - useState
+
+React -> https://es.reactjs.org/
 
 ## Sección 05 Pruebas unitarias y de integración - Intro
 - Introducción a las pruebas
@@ -59,5 +72,22 @@ https://gist.github.com/Klerith/4a4abfd88a88b2d1f16efd95fea41362
 - Comandos útiles en la terminal para pruebas
 - Revisar elementos renderizados en el componente
 - Simular eventos
+
+Jest -> https://jestjs.io/
+
+Enzyme -> https://enzymejs.github.io/enzyme/
+
+Enzyme-to-json -> https://www.npmjs.com/package/enzyme-to-json
+
+## Sección 06 GifExpertApp
+- Custom Hooks
+- Fetch hacia un API
+- Comunicación entre componentes
+- Clases de CSS
+- Animaciones
+- Enviar métodos como argumentos
+- Crear listados
+- keys
+- Giphy
 
 

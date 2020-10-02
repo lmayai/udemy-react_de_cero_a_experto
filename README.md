@@ -90,4 +90,7 @@ Enzyme-to-json -> https://www.npmjs.com/package/enzyme-to-json
 - keys
 - Giphy
 
+Estructura -> https://es.reactjs.org/docs/faq-structure.html
+
+Estructura -> https://hackernoon.com/structuring-projects-and-naming-components-in-react-1261b6e18d76
 

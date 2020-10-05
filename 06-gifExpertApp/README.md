@@ -70,7 +70,15 @@ const handleSubmit = (e) => {
 ```
 En formulario es importante destacar que para evitar una actualización de la página, es necesario un preoventDefault del evento
 
-```js```
+- Evitar useState sin inicializar. Si no se inicializa obtenemos el siguiente error *Warning: A component is changing an uncontrolled input of type text to be controlled. Input elements should not switch from uncontrolled to controlled (or vice versa). Decide between using a controlled or uncontrolled input element for the lifetime of the component.*
+```js
+const [inputValue, setInputValue] = useState();
+```
+
+Para solucionarlo, basta con agregar comillas vacias.
+```js
+const [inputValue, setInputValue] = useState('');
+```
 ```js```
 ```js```
 ```js```

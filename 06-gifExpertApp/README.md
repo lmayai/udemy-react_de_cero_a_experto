@@ -79,9 +79,42 @@ Para solucionarlo, basta con agregar comillas vacias.
 ```js
 const [inputValue, setInputValue] = useState('');
 ```
-```js```
-```js```
-```js```
+
+## useEffect
+El useEffect es un hooks que permite ejecutar cierto código siguiendo unas dependencias. 
+Es muy probable que si se llama endPoints al cargar el componente, este se llame siempre que se actualice algo dentro de este. 
+
+Para evitar que solo se haga el llamado una única vez, se usa el *useEffect*. este recibe un callback y un arreglo de dependencias.
+```js
+useEffect(() => {
+  getGifs();
+}, []);
+```
+
+Este useEffect con un [] vacio es exactamente el **componentDidMount** del React con clases. Osea, ejecuta cuando el componente es renderizado por primera vez
+
+## Envio de todas las props con spread operator
+Es posible que se quiera enviar toda la información de un objeto a un subcomponent. Imaginando que *images* es un arreglo de objetos y cada objeto tiene *{url, id, title}*. Es posible pasar todas las propiedades con el spred operator como se ve acontionuación.
+```js
+{
+  images.map((img) => (
+    <GifGridItem
+      key={img.id}
+      {...img} 
+    />
+  ))
+}
+```
+
+Luego el component las recibe así:
+```js
+export const GifGridItem = ({id, title, url}) => {}
+```
+
+## Aplicar estilos
+En React no es posible usar class dentro de los components. Para eso, es necesario cambiar class, por  *className*
+
+
 ```js```
 ```js```
 ```js```

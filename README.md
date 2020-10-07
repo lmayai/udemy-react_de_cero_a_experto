@@ -95,3 +95,14 @@ Estructura -> https://es.reactjs.org/docs/faq-structure.html
 Estructura -> https://hackernoon.com/structuring-projects-and-naming-components-in-react-1261b6e18d76
 
 Animaciones -> https://animate.style/
+
+## Sección 07 Generando buld de producción y despliegue e Githubs
+- Aprender cómo realizar backups a repositorios de Git
+- Subir nuestro repositorio a GitHub
+- Uso de Github Pages
+- Desplegar nuestra aplicación de React
+- Generar build de producción de nuestra aplicación
+
+Server local -> https://www.npmjs.com/package/http-server
+
+Despligue app -> https://lmayai.github.io/udemy-react-app-gif-expert/

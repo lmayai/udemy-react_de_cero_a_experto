@@ -125,7 +125,69 @@ useEffect(() => {
   }, [category]);
 ```
 
+## Custom hooks
+Es una forma de extraer logica de un componente, para reutilzzarla y que sea sencillo reutilizarla.
+Por ejm, hay un useeffect para hacer una pteicion y almacenarla a unas imagenes.
+
+Lo que se hará es un customHook que cuando el componente carga, haga la peticion fetch y haga la carga
+
+- Se crea un carpta hooks/ y dentro un archivo llamado useFetchGifs. El *use* es una convensión para definir que es un hook. **Un hook no es más que una función**
+
+Los Custom hooks, funcionan como funcitonal component. Pueden tener efetos, usar reducers, pueden usar contextos, etc
+```js
+export const useFetchGifs = () => {
+  const [state, setState] = useState({
+    data: [],
+    loading: true,
+  });
+
+  setTimeout(() => {
+    setState({
+      data: [1,2,3,4,5],
+      loading: false
+    })
+  }, 3000);
+
+  return state;
+}
+```
+En el hook, lo que se hace es almacenar un state. Ese state tiene variables que pueden luego ser usadas dentro de mi component.
+```js
+export const GifGrid = ({category}) => {
+
+  const { loading } = useFetchGifs();
+  
+  return (
+    <>
+      <h3>{category}</h3>
+      { loading ? 'Cargando...' : 'Cargado'}  
+    </>
+  )
+}
+```
+
+Luego en ese custoom Hooks puedo tener
+```js
+useEffect(() => {
+    getGifs(category)
+      .then(images =>{
+        setState({
+          data: images,
+          loading: false,
+        })
+      })
+  }, [category]);
+```
+
+Donde luego en la data solo tengo las imagenes. y al retornar solo debo usarlas
+
+```js
+  const { loading, data: images } = useFetchGifs(category);
+```
+
+
 ```js```
 ```js```
-```js``` 
+```js```
+```js```
 ```js```

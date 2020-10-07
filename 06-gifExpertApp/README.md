@@ -114,9 +114,18 @@ export const GifGridItem = ({id, title, url}) => {}
 ## Aplicar estilos
 En React no es posible usar class dentro de los components. Para eso, es necesario cambiar class, por  *className*
 
+## Aplicar efectos como dependencias
+Es posible que si dentro de useEffect se usa un parametro aparezca un warning *React Hook useEffect has a missing dependency: 'category'. Either include it or reove the dependencymove the dependency array  react-hooks/exhaustive-deps*
+
+Para solucionar el warning basta poner como dependecia el parametro dentro del useEffect.
+```js
+useEffect(() => {
+    getGifs(category)
+      .then(setImages)
+  }, [category]);
+```
 
 ```js```
 ```js```
-```js```
-```js```
+```js``` 
 ```js```

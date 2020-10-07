@@ -94,3 +94,4 @@ Estructura -> https://es.reactjs.org/docs/faq-structure.html
 
 Estructura -> https://hackernoon.com/structuring-projects-and-naming-components-in-react-1261b6e18d76
 
+Animaciones -> https://animate.style/

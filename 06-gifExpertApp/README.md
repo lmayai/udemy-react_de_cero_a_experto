@@ -185,6 +185,10 @@ Donde luego en la data solo tengo las imagenes. y al retornar solo debo usarlas
   const { loading, data: images } = useFetchGifs(category);
 ```
 
+## Para animaciones
+https://animate.style/
+
+
 
 ```js```
 ```js```

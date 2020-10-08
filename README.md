@@ -106,3 +106,19 @@ Animaciones -> https://animate.style/
 Server local -> https://www.npmjs.com/package/http-server
 
 Despligue app -> https://lmayai.github.io/udemy-react-app-gif-expert/
+
+## Sección 08 Testing GifExpertApp 
+- Seguir el camino de las pruebas
+- Pruebas en componentes específicos
+- Pruebas en componentes de forma individual
+- Pruebas con customHooks
+- Esperar cambios en un customHook
+- Simular eventos en inputs y formularios
+- Simular llamadas a funciones
+- Evaluar si existen elementos en el componente
+
+Es necesario
+
+Enzyme -> https://enzymejs.github.io/enzyme/
+
+Enzyme-to-json -> https://www.npmjs.com/package/enzyme-to-json
